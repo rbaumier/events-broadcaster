@@ -1,0 +1,14 @@
+{
+  "name": "socket.io-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "open index.html && node server.js"
+  },
+  "dependencies": {
+    "events-broadcaster": "^0.0.1",
+    "redis": "^2.8.0",
+    "socket.io": "^2.3.0"
+  }
+}

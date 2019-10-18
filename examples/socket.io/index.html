@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Event broadcaster example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+  </head>
+  <body></body>
+  <script>
+    const socket = io.connect('http://localhost:3333');
+    const roomID = 123;
+    const broadcastEvent = 'BROADCAST_INSIDE_ROOM';
+
+    socket.on('connect', () => {
+      socket.emit('ROOMS_JOIN', roomID, () => {
+        socket.on(broadcastEvent, message => {
+          console.log(`received message \o/: ${broadcastEvent}: ${message}`);
+        });
+
+        socket.emit(broadcastEvent, `send this to everyone inside the room ${roomID}!`);
+      });
+    });
+  </script>
+</html>

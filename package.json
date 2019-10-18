@@ -1,0 +1,13 @@
+{
+  "name": "events-broadcaster",
+  "version": "0.0.2",
+  "description": "Broadcast events through Redis PubSub",
+  "main": "src/index.js",
+  "repository": "git@github.com:rbaumier/events-broadcaster.git",
+  "author": "Romain Baumier <baumier.romain@gmail.com>",
+  "files": [
+    "src/index.js"
+  ],
+  "license": "MIT",
+  "private": false
+}

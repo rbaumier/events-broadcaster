@@ -4,6 +4,14 @@
   <img src="./docs/workflow.png"/>
 </p>
 
+### Installation
+
+```
+npm install events-broadcaster --save
+# or 
+yarn add events-broadcaster
+```
+
 ### What?
 
 Library using Redis PubSub to scale a websocket server (such as socket.io, but not exclusively) to more than one instance.

@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "events-broadcaster": "^0.0.1",
-    "redis": "^2.8.0",
+    "redis": "^3.1.1",
     "socket.io": "^2.3.0"
   }
 }
